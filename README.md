@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Flask Template
 Basic structure for starting a Flask project with Jinja templates
 
@@ -31,3 +32,6 @@ Basic structure for starting a Flask project with Jinja templates
 12. Create and change to a new local development branch ```git checkout b development```
 
 13. Continue working with the project as you normally would.
+=======
+# vt_site
+>>>>>>> 425126f6c6260621ab5982d160be40ad13078f72
