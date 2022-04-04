@@ -1,6 +1,17 @@
 {% extends 'base.html' %}
 
-{% block title %} Welcome to the home page {% endblock %}
+{% block body %}
+    <h1> Welcome to the Homepage</h1> 
 
+    <img src = "{{ url_for('static', filename= 'above_ground_vertical_tanks.jpg') }" />
 
-{% block body %} Hello world! {% endblock %}
+    <body>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+        Commodo ullamcorper a lacus vestibulum sed. Eu tincidunt tortor aliquam nulla facilisi cras fermentum. Cursus mattis molestie a iaculis at erat pellentesque. 
+        Blandit aliquam etiam erat velit scelerisque in. Nunc eget lorem dolor sed viverra ipsum. Tempus egestas sed sed risus pretium. Egestas diam in arcu cursus euismod quis viverra. 
+        Egestas purus viverra accumsan in. Blandit volutpat maecenas volutpat blandit. Natoque penatibus et magnis dis parturient. Posuere lorem ipsum dolor sit amet consectetur adipiscing. 
+        Amet commodo nulla facilisi nullam. Ultrices neque ornare aenean euismod elementum nisi quis eleifend quam. Eu turpis egestas pretium aenean pharetra magna ac placerat. 
+        Diam volutpat commodo sed egestas egestas fringilla phasellus. Etiam sit amet nisl purus in. Ut tortor pretium viverra suspendisse potenti nullam ac.
+    </body>
+    
+{% endblock %}

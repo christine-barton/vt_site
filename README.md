@@ -1,37 +1,27 @@
 <<<<<<< HEAD
-# Flask Template
-Basic structure for starting a Flask project with Jinja templates
+# Flask Homework Assignment
+We are using Flask and Azure to create a small web application for creating estimates.
 
----
-1. Clone this repository to local computer
 
-2. Rename the directory to reflect the new project name
+# What Did I Learn?
+I learned how to use flask and how it integrates with GitHub. Also I learned how to clone a repository, edit it and make it your own. 
 
-3. Delete .git folder
 
-4. Create a new virtual environment 
-    - Windows:  ```python -m venv ./venv```
-    - Mac:  ```python3 -m venv ./venv```
+# Installation Instructions
+1. Ordered
+2. list
+3. of 
+4. installation 
+5. instructions
 
-5. Activate the new virtual environment
-   - Windows:  ```.\venv\Scripts\activate```
-   - Mac:  ```source ./venv/bin/activate```
 
-6. Install the dependencies ```pip install -r requirements.txt```
+## Link to Working Website
 
-7. Make a new repository by running ```git init``` in the folder.
+Click the Link below.
 
-8. Track all the files in the new local repository ```git add .```
+```
+Link Here.
+```
 
-9. Make the first commit of this new project ```git commit -m 'first commit of <project name> from flask_template```
-
-10. On Github, create a new repository. *DO NOT* initialize it
-
-11. Connect the local repository to the new Github repository ```git remote add origin <<repository_URL>>```
-
-12. Create and change to a new local development branch ```git checkout b development```
-
-13. Continue working with the project as you normally would.
-=======
 # vt_site
 >>>>>>> 425126f6c6260621ab5982d160be40ad13078f72
