@@ -1,17 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> {% block title %} About Vertical Tank Maintenance {% endblock %} </title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/stylesheet.css') }}">
-</head>
+{% extends 'base.html' %}
 
-<hr> <img src= "{{ url_for('static', filename= 'company+president.png') }}" /> <hr>
+{% block title %} About Vertical Tank Maintenance {% endblock %}
 
+
+{% block body %}
 <body>
     <div>
         <h1>About Vertical Tank Maintenance</h1>
+        
+        <hr> 
+        <img src= "{{ url_for('static', filename= 'company+president.png') }}" /> 
+        <hr>
 
         <body>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
@@ -43,11 +42,8 @@
             Nisi porta lorem mollis aliquam ut porttitor leo. Amet purus gravida quis blandit turpis cursus in hac habitasse. Aliquam malesuada bibendum arcu vitae. Mauris commodo quis imperdiet massa tincidunt nunc pulvinar sapien et. 
             Lacinia quis vel eros donec ac odio tempor. Nisi vitae suscipit tellus mauris a diam maecenas sed. </p>
         </body>        
-        
-        {% block body %}
-
-        {% endblock %}
-
     </div>
 </body>
+{% endblock %}
+
 </html>
