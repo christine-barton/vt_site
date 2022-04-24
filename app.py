@@ -11,21 +11,25 @@ def index():
 def about():
     return render_template('about.html', pageTitle= 'About Vertical Tank Maintenance')
 
-@app.route('/estimate', methods= ['GET', 'POST'])
+def calculate_estimate(radius,height):
+        top_area = 3.14 * int(radius)**2
+        side_area = 2*(3.14*(int(radius)*int(height)))
+        total_inch = top_area + side_area
+        total_sqft = total_inch / 144
+        mat_cost = total_sqft * 25
+        labor_cost = total_sqft * 15
+        t_estimate = mat_cost + labor_cost
+        total_estimate = "{:,.2f}".format(t_estimate)
+        return total_estimate
+
+@app.route('/estimate', methods=["GET", "POST"])
 def estimate():
-    if request.method == 'POST':
-        form = request.form
-        radius = int(form['radius'])
-        height= int(form['height'])
-        top_area = 3.14 * (radius**2)
-        side_area = 2*(3.14* (radius* height))
-        total_area_in = top_area + side_area 
-        total_area_sq_ft = total_area_in/ 144
-        material_cost= total_area_sq_ft * 25
-        labor_cost= total_area_sq_ft * 15 
-        total_cost_estimate = material_cost + labor_cost
-        return render_template('estimate.html', final_estimate = total_cost_estimate)
-    return render_template ('estimate.html', pageTitle= 'Estimator Calculator')
+    if request.method == "POST":
+        radius = request.form.get('radius')
+        height = request.form.get('height')
+        estimate = calculate_estimate(radius,height)
+        return render_template('estimate.html', estimate=estimate)
+    return render_template('estimate.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
