@@ -13,19 +13,20 @@ def about():
 
 @app.route('/estimate', methods= ['GET', 'POST'])
 def estimate():
+    return render_template ('estimate.html', pageTitle= 'Estimator Calculator')
+
+@app.route('/estimate2', methods=['GET', 'POST'])
+def estimate2():
     if request.method == 'POST':
         form = request.form
-        radius = int(form['radius'])
-        height= int(form['height'])
-        top_area = 3.14 * (radius**2)
-        side_area = 2*(3.14* (radius* height))
-        total_area_in = top_area + side_area 
-        total_area_sq_ft = total_area_in/ 144
-        material_cost= total_area_sq_ft * 25
-        labor_cost= total_area_sq_ft * 15 
-        total_cost_estimate = material_cost + labor_cost
-        return render_template('estimate.html', final_estimate = total_cost_estimate)
-    return render_template ('estimate.html', pageTitle= 'Estimator Calculator')
+        radius = float(form['radius'])
+        height = float(form['height'])
+        print(radius)
+        print(height)
+        cost = (((3.14*(radius**2))+(2*3.14*radius*height))/144*25)+(((3.14*(radius**2))+(2*3.14*radius*height))/144*15)
+        print(cost)
+        return render_template('estimate.html', pageTitle = 'Estimator Calculator', estimate = cost)
+    return render_template('estimate.html', pageTitle = "Estimator Calculator")
 
 if __name__ == '__main__':
     app.run(debug=True)
