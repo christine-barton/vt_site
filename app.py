@@ -28,7 +28,7 @@ def estimate():
         radius = request.form.get('radius')
         height = request.form.get('height')
         estimate = calculate_estimate(radius,height)
-        return render_template('estimate.html', estimate=estimate)
+        return render_template('estimate.html', final_estimate=estimate)
     return render_template('estimate.html')
 
 if __name__ == '__main__':
