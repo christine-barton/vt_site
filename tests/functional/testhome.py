@@ -39,7 +39,8 @@ def test_estimate_functionality(app, client):
     WHEN the 'Calculate' button is selected (POST)
     THEN check that the correct price estimate is returned to the user
     """
-
+    print("\r")
+    print(" -- estimate unit test")
     with app.test_client as test_client:
         estimate = {"Tank height":"360", "Tank radius":"180", "Calculate":"x"}
         res = test_client.post('/estimate', data=estimate)
