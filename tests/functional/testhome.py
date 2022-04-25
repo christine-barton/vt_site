@@ -30,7 +30,7 @@ def test_estimate_route(app, client):
     THEN check that the response is valid
     """
     with app.test_client() as test_client:
-        res = test_client/get('/estimate')
+        res = test_client.get('/estimate')
         assert res.status_code == 200
 
 def test_estimate_functionality(app, client):
