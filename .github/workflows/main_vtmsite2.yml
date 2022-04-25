@@ -60,4 +60,4 @@ jobs:
         with:
           app-name: 'vtmsite2'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_E6210100C3C04634A13228F63EC150A3 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_C0D1EDE30B6143A389E072BA9226E7FB }}
