@@ -6,5 +6,5 @@ def test_calculate_estimate():
      WHEN that radius and height is passed to this function
      THEN the total_estimate is accurately calculated
      """
-     assert app.calculate_estimate(180,360) == "141,300.00"
+     assert app.calculate_estimate(180,360) == "141300.0"
      
