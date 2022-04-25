@@ -1,5 +1,5 @@
 from flask import Flask
-from flask import render_template, redirect, request
+from flask import render_template, redirect, request, url_for
 
 app = Flask(__name__)
 
@@ -16,10 +16,10 @@ def calculate_estimate(radius,height):
         side_area = 2*(3.14*(int(radius)*int(height)))
         total_inch = top_area + side_area
         total_sqft = total_inch / 144
-        mat_cost = total_sqft * 25
+        material_cost = total_sqft * 25
         labor_cost = total_sqft * 15
-        t_estimate = mat_cost + labor_cost
-        total_estimate = "{:,.2f}".format(t_estimate)
+        total_estimate1 = material_cost + labor_cost
+        total_estimate = "{:,.2f}".format(total_estimate1)
         return total_estimate
 
 @app.route('/estimate', methods=["GET", "POST"])
