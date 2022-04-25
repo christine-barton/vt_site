@@ -29,7 +29,7 @@ def estimate():
         height = request.form.get('height')
         estimate = calculate_estimate(radius,height)
         return render_template('estimate.html', final_estimate=estimate)
-    return render_template('estimate.html', pageTitle= 'Estimator Calculator ')
+    return render_template('estimate.html', pageTitle= 'Estimator Calculator')
 
 if __name__ == '__main__':
     app.run(debug=True)
