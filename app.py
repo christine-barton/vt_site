@@ -25,7 +25,7 @@ def estimate():
         labor_cost= total_area_sq_ft * 15 
         total_cost_estimate = material_cost + labor_cost
         return render_template('estimate.html', final_estimate = total_cost_estimate)
-    return render_template ('estimate.html', pageTitle= 'Estimator Calculator')
+    return render_template ('estimate.html', pageTitle= 'Estimator Calculator 1')
 
 if __name__ == '__main__':
     app.run(debug=True)
