@@ -33,16 +33,13 @@ def test_estimate_route(app, client):
         res = test_client.get('/estimate')
         assert res.status_code == 200
 
-def test_estimate_functionality(app, client):
+def test_estimate_route(app, client):
     """ 
     GIVEN a Flask application configured for testing
     WHEN the 'Calculate' button is selected (POST)
     THEN check that the correct price estimate is returned to the user
     """
-    print("\r")
-    print(" -- estimate unit test")
-    with app.test_client as test_client:
-        estimate = {"Tank height":"360", "Tank radius":"180", "Calculate":"x"}
-        res = test_client.post('/estimate', data=estimate)
+    with app.test_client() as test_client:
+        estimate = {"Tank radius":"180","Tank height":"360"}
+        res = test_client.get('/estimate', data= estimate)
         assert res.status_code == 200
-        assert b"$141,300.00" in res.data
