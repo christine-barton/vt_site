@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-# Flask Homework Assignment
+# Flask and DevOps Pipeline Homework Assignment
 We are using Flask and Azure to create a small web application for creating estimates.
 
 
