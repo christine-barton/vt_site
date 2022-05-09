@@ -20,8 +20,5 @@ I learned how to use flask and how it integrates with GitHub. Also I learned how
 Click the Link below.
 
 ```
-Link Here.
+https://vtmsite2.azurewebsites.net/
 ```
-
-# vt_site
->>>>>>> 425126f6c6260621ab5982d160be40ad13078f72
